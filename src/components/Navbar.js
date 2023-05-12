@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
       <div className="container-fluid">
 
-        <a className="navbar-brand" href="#"><img src='../logo.png' />Video Drive</a>
+        <a className="navbar-brand" href="#"><img id="logoVD" src='../logo.png' />Video Drive</a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -37,6 +37,7 @@ const Navbar = () => {
             <input className="form-control me-2" type="search" placeholder="Recherche" aria-label="Search"></input>
             <button className="btn btn-outline-success" type="submit">Recherche</button>
           </form>
+          <a className="navbar-brand" href="#"><img id ="caddie" src='../logo_caddie.png' /></a>
         </div>
       </div>
     </nav>
