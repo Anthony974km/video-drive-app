@@ -5,7 +5,7 @@ import Carousel from '../components/Carousel';
 import MutipleItemsCarousel from '../components/MultipleItemsCarousel';
 import Card from '../components/Card';
 
-const acceuil = () => {
+const Accueil = () => {
     return (
         <div className='app'>
             <Navbar />
@@ -17,4 +17,4 @@ const acceuil = () => {
     );
 };
 
-export default acceuil;
+export default Accueil;

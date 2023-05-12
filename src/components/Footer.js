@@ -33,25 +33,13 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
+          <div className="social-media">
             <h5 className="text-uppercase mb-0">Suivez-nous</h5>
-            <ul className="list-unstyled">
-              <li>
-                <a href="#!" className="text-dark"><i className="bi bi-facebook"></i></a>
-              </li>
-              <li>
-                <a href="#!" className="text-dark"><i className="bi bi-youtube"></i></a>
-              </li>
-              <li>
-                <a href="#!" className="text-dark"><i className="bi bi-twitter"></i></a>
-              </li>
-              <li>
-                <a href="#!" className="text-dark"><i className="bi bi-instagram"></i></a>
-              </li>
-              <li>
-                <a href="#!" className="text-dark"><i className="bi bi-tiktok"></i></a>
-              </li>
-            </ul>
+                <a href="#!" className="facebook"><img id="facebook" src='../facebook.png' /></a>
+                <a href="#!" className="youtube"><img id="youtube" src='../youtube.png' /></a>
+                <a href="#!" className="twitter"><img id="twitter" src='../twitter.png' /></a>
+                <a href="#!" className="insta"><img id="insta" src='../insta.png' /></a>
+                <a href="#!" className="tiktok"><img id="tiktok" src='../tiktok.png' /></a>
           </div>
         </div>
       </div>
