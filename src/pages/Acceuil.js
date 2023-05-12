@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import Carousel from '../components/Carousel';
 import MutipleItemsCarousel from '../components/MultipleItemsCarousel';
 import Card from '../components/Card';
+import CarouselCard from '../components/CarouselCard';
 
 const acceuil = () => {
     return (
@@ -11,7 +12,8 @@ const acceuil = () => {
             <Navbar />
             <Carousel />
             <MutipleItemsCarousel />
-            <Card />
+            <b id="tend">Tendances</b>
+            <CarouselCard />
             <Footer />
         </div>
     );
