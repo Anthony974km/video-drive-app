@@ -1,9 +1,10 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap/dist/js/bootstrap.min.js';
 
 const navbar = () => {
     return (
-      <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div className="container-fluid">
           <a className="navbar-brand" href="#">Video Drive</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -20,9 +21,11 @@ const navbar = () => {
                 </a>
                 <ul className="dropdown-menu">
                   <li><a className="dropdown-item" href="#">Jeux Vidéo</a></li>
-                  <li><a className="dropdown-item" href="#">Another action</a></li>
+                  <li><a className="dropdown-item" href="#">Console</a></li>
+                  <li><a className="dropdown-item" href="#">Cartes Cadeaux</a></li>
+                  <li><a className="dropdown-item" href="#">Abonnements</a></li>
                   <li><hr className="dropdown-divider"></hr></li>
-                  <li><a className="dropdown-item" href="#">Something else here</a></li>
+                  <li><a className="dropdown-item" href="#">Promotions</a></li>
                 </ul>
               </li>
               <li className="nav-item">
