@@ -7,7 +7,7 @@ import Card from './Card';
 const CarouselCard = () => {
     let [tends, setTends] = useState([]);
     const fetchTends = () => {
-        axios.get('http://localhost:3000/produits').then((reponse) => {
+        axios.get('http://192.168.0.52:3000/produits').then((reponse) => {
             setTends(reponse.data);
             console.log(reponse.data);
         }
