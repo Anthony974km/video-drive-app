@@ -6,7 +6,7 @@ import "bootstrap/dist/js/bootstrap.min.js";
 
 const Produit = () => {
   return (
-    <div className="app">
+    <div className="appProduit">
       <Navbar />
       <div className="main-container">
         <div className="platforme"> <img
