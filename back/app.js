@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const port = 3000;
 const userRoutes = require('./routes/users');
+const produitRoutes = require('./routes/produits');
 const db = require('./models');
 
 app.use(express.json());
@@ -11,6 +12,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/users', userRoutes);
+app.use('/produits', produitRoutes); // Utilisation de 'produits' au lieu de 'produit'
 
 db.sequelize.sync().then(() => {
     app.listen(port, () => {
