@@ -2,10 +2,11 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import { Link } from 'react-router-dom';
+import Produit from "../pages/Produit";
 
 const Card = (props) => {
   return (
-    <Link to={`/produit/`}>
+    <Link to={`/produit/`+ props.id}>
       <div className="card">
         <div class="image-container">
           <img src={props.imageUrl} alt={props.title} />
