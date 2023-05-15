@@ -11,9 +11,29 @@
 
 .card-body {
     text-align: center;
+
 }
 
 .d-block {
     background-image: url('https://gaming-cdn.com/img/products/4860/hcover/1920x620/4860.jpg');
     background-size: cover;
+}
+
+.image-container {
+    border-radius: 20px;
+    width: 200px;
+    /* Définissez la largeur souhaitée pour votre carré */
+    height: 200px;
+    /* Définissez la hauteur souhaitée pour votre carré */
+    overflow: hidden;
+
+    /* Masque tout contenu débordant de la div */
+    img {
+        width: 100%;
+        /* Ajuste la largeur de l'image à 100% de la div parente */
+        height: 100%;
+        /* Permet à la hauteur de s'ajuster automatiquement pour éviter la déformation */
+        object-fit: cover;
+        /* Redimensionne l'image pour remplir entièrement le conteneur tout en préservant les proportions */
+    }
 }
