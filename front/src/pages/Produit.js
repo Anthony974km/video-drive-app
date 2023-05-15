@@ -1,11 +1,12 @@
 import React from "react";
+import axios from 'axios';
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import CheckoutForm from "../components/CheckoutForm";
 
-const Produit = () => {
+const Produit = (props) => {
   return (
     <div className="appProduit">
       <Navbar />
@@ -20,7 +21,7 @@ const Produit = () => {
         <div>
           <img src="../titre.png" alt="titre" className="img-titre" />
           <div className="fiche-technique">
-            <h2>The Legend of Zelda: Tears of the Kingdom Switch - Europe</h2>
+            <h2>{props.title}The Legend of Zelda: Tears of the Kingdom</h2> 
             <div class="notice">
               <a href="#">
                 <img src="../star.png" alt="star-1" />
@@ -43,7 +44,6 @@ const Produit = () => {
                 Acheter maintenant
               </button>
             </div>
-
             <h3>65.49$</h3>
             <h4>75.99$</h4>
           </div>
