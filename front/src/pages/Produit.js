@@ -9,11 +9,12 @@ const Produit = () => {
     <div className="app">
       <Navbar />
       <div className="main-container">
-        <img
+        <div className="platforme"> <img
           src="../logo-plateforme.png"
           alt="jeu-image"
           className="logo-plateforme"
-        />
+        /></div>
+
         <img src="../jeu-image.png" alt="jeu-image" className="main-image" />
         <div>
           <img src="../titre.png" alt="titre" className="img-titre" />
@@ -36,9 +37,12 @@ const Produit = () => {
                 <img src="../star.png" alt="star-5" />
               </a>
             </div>
-            <button type="button" class="btn btn-warning">
-              Ajouter au panier
-            </button>
+            <div className="boutonAchat">
+              <button type="button" class="btn btn-warning">
+                Acheter maintenant
+              </button>
+            </div>
+
             <h3>65.49$</h3>
             <h4>75.99$</h4>
           </div>
