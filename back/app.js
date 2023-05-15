@@ -14,7 +14,7 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
     next();
 });
-
+app.use(express.static("public"));
 app.use(express.json());
 
 app.get('/', (req, res) => {
@@ -32,10 +32,12 @@ app.post('/paiement', async (req, res) => {
         const paymentIntent = await stripe.paymentIntents.create({
             amount: montant * 100, // Convertir le montant en centimes
             currency: 'eur',
-            payment_method_types: ['card'],
+            automatic_payment_methods: {
+                enabled: true,
+            },
         });
 
-        res.json({ clientSecret: paymentIntent.client_secret });
+        res.send({ clientSecret: paymentIntent.client_secret });
     } catch (err) {
         res.status(500).json({ error: err.message });
     }

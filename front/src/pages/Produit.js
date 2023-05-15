@@ -1,12 +1,27 @@
-import React from "react";
-import axios from 'axios';
+import { useParams } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
-import CheckoutForm from "../components/CheckoutForm";
 
-const Produit = (props) => {
+import { Link } from "react-router-dom";
+
+const Produit = () => {
+  const { id } = useParams();
+  const [product, setProduct] = useState(null);
+
+  useEffect(() => {
+    // Effectuer la requête à l'API en utilisant l'ID du produit
+    fetch(`http://localhost:3000/produits/${id}`)
+      .then((response) => response.json())
+      .then((data) => setProduct(data));
+  }, [id]);
+
+  // Afficher les détails du produit
+  if (!product) {
+    return <div>Loading...</div>;
+  }
   return (
     <div className="appProduit">
       <Navbar />
@@ -19,9 +34,9 @@ const Produit = (props) => {
 
         <img src="../jeu-image.png" alt="jeu-image" className="main-image" />
         <div>
-          <img src="../titre.png" alt="titre" className="img-titre" />
+          <img src={product.photo} alt="titre" className="img-titre" />
           <div className="fiche-technique">
-            <h2>{props.title}The Legend of Zelda: Tears of the Kingdom</h2> 
+            <h2>{product.nom}</h2>
             <div class="notice">
               <a href="#">
                 <img src="../star.png" alt="star-1" />
@@ -40,11 +55,13 @@ const Produit = (props) => {
               </a>
             </div>
             <div className="boutonAchat">
-              <button type="button" class="btn btn-warning">
-                Acheter maintenant
-              </button>
+              <Link to={`/paiement/${product.id}`}>
+                <button type="button" className="btn btn-warning">
+                  Acheter maintenant
+                </button>
+              </Link>
             </div>
-            <h3>65.49$</h3>
+            <h3>{product.prix}$</h3>
             <h4>75.99$</h4>
           </div>
         </div>
@@ -52,13 +69,7 @@ const Produit = (props) => {
       <div className="description">
         <h1>À propos du jeu</h1>
         <p>
-          Une aventure épique à travers les terres et les cieux d'Hyrule vous
-          attend dans The Legend of Zelda: Tears of the Kingdom sur Nintendo
-          Switch. Créez votre propre aventure dans un monde où vous pouvez
-          donner libre cours à votre imagination. Dans cette suite de The Legend
-          of Zelda: Breath of the Wild, c'est à vous de décider du chemin que
-          vous voulez suivre à travers les immenses terres d'Hyrule et les
-          vastes cieux qui les surplombent.
+          {product.description}
         </p>
       </div>
 
