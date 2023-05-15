@@ -53,7 +53,7 @@
 }
 
 .fiche-technique h4 {
-  padding-top: 20px;
+
   color: #f60c0c;
   font-style: normal;
   font-weight: 700;
@@ -74,7 +74,6 @@
   gap: 10px;
   align-items: center;
   text-align: center;
-  width: 102px;
   height: 54px;
   left: 1015px;
   top: 485px;
@@ -92,6 +91,8 @@
 }
 
 .description {
+  margin: 30px;
+  margin-bottom: 70px;
   left: -21px;
   top: 720px;
 
@@ -124,4 +125,24 @@ h1 {
   margin: 0;
 
   font-size: 16px;
+}
+
+.boutonAchat {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.platforme {
+  text-align: center;
+
+  img {
+    position: absolute;
+    margin-top: 53px;
+    z-index: 100;
+  }
+
+}
+
+body {
+  background: #4d4949;
 }
