@@ -1,0 +1,15 @@
+.carouselExampleIndicators {
+    .carousel-inner {
+        .carousel-item {
+            width: 100%;
+            overflow: hidden;
+
+            img {
+                object-fit: cover;
+
+
+                height: 100%;
+            }
+        }
+    }
+}

@@ -11,13 +11,13 @@ const Carousel = () => {
             </div>
             <div className="carousel-inner" style={{ height: "400px" }}>
                 <div className="carousel-item active" >
-                    <img src="https://gaming-cdn.com/img/products/4860/hcover/1920x620/4860.jpg" className="d-block w-100" alt="zelda" />
+                    <img src="https://gaming-cdn.com/img/products/4860/hcover/1920x620/4860.jpg" className="d-block" alt="zelda" />
                 </div>
                 <div className="carousel-item">
                     <img src="https://www.micromania.fr/on/demandware.static/-/Sites-Micromania-Library/default/dw415bfa62/Herocarousel/large/ConcoursConsole-Redfall-background-desktop-normal.jpg" className="d-block w-100" alt="..." />
                 </div>
                 <div className="carousel-item">
-                    <img src="https://gaming-cdn.com/img/products/13779/pcover/1920x620/13779.jpg" className="d-block w-100" alt="moto" />
+                    <img src="https://gaming-cdn.com/img/products/13779/pcover/1920x620/13779.jpg" className="d-block" alt="moto" />
                 </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
