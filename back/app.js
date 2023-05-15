@@ -25,12 +25,12 @@ app.use('/users', userRoutes);
 app.use('/produits', produitRoutes); // Utilisation de 'produits' au lieu de 'produit'
 app.post('/paiement', async (req, res) => {
     try {
-        // Récupérer le prix à partir de la base de données
-        const prix = 10;
+        // Récupérer le montant à partir du corps de la requête JSON
+        const montant = req.body.montant;
 
-        // Créer le paiement avec le prix de la base de données
+        // Créer le paiement avec le montant récupéré
         const paymentIntent = await stripe.paymentIntents.create({
-            amount: prix * 100, // Convertir le prix en centimes
+            amount: montant * 100, // Convertir le montant en centimes
             currency: 'eur',
             payment_method_types: ['card'],
         });
@@ -40,6 +40,7 @@ app.post('/paiement', async (req, res) => {
         res.status(500).json({ error: err.message });
     }
 });
+
 db.sequelize.sync().then(() => {
     app.listen(port, () => {
         console.log(`App listening at http://localhost:${port}`);

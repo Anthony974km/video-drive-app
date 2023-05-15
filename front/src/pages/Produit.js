@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
+import CheckoutForm from "../components/CheckoutForm";
 
 const Produit = () => {
   return (
@@ -60,6 +61,7 @@ const Produit = () => {
           vastes cieux qui les surplombent.
         </p>
       </div>
+
       <Footer />
     </div>
   );
