@@ -19,7 +19,7 @@ const Footer = () => {
             <h5 className="text-uppercase">Liens utiles</h5>
             <ul className="list-unstyled mb-0">
               <li>
-                <a href="#!" className="text-white">
+                <a href="/*" className="text-white">
                   Accueil
                 </a>
               </li>
@@ -43,19 +43,19 @@ const Footer = () => {
           <div className="rowSocial">
             <h5 className="text-uppercase p-3">Suivez-nous</h5>
             <div className="social-media">
-              <a href="#!" className="facebook">
+              <a href="https://www.facebook.com/VIDEODRIVE974/timeline/?ref=hl" className="facebook">
                 <img id="facebook" src="../facebook.png" />
               </a>
-              <a href="#!" className="youtube">
+              <a href="https://www.youtube.com/c/VIDEODRIVE974" className="youtube">
                 <img id="youtube" src="../youtube.png" />
               </a>
-              <a href="#!" className="twitter">
+              <a href="https://twitter.com/videodrive974" className="twitter">
                 <img id="twitter" src="../twitter.png" />
               </a>
-              <a href="#!" className="insta">
+              <a href="https://www.instagram.com/videodrive974/" className="insta">
                 <img id="insta" src="../insta.png" />
               </a>
-              <a href="#!" className="tiktok">
+              <a href="https://www.tiktok.com/@videodrive974" className="tiktok">
                 <img id="tiktok" src="../tiktok.png" />
               </a>
             </div>

@@ -6,7 +6,7 @@ import Produit from "../pages/Produit";
 
 const Card = (props) => {
   return (
-    <Link to={`/produit/`+ props.id}>
+    <Link to={`/produit/`}>
       <div className="card">
         <div class="image-container">
           <img src={props.imageUrl} alt={props.title} />
