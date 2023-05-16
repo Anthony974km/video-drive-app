@@ -30,7 +30,8 @@ const Produit = () => {
         <div className="platforme"> <img
           src="../logo-plateforme.png"
           alt="jeu-image"
-          className="logo-plateforme"
+          className="logo-platform {
+            "
         /></div>
 
         <img src="../jeu-image.png" alt="jeu-image" className="main-image" />
