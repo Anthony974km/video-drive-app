@@ -5,6 +5,7 @@ import "../styles/components/_CheckoutForm.scss";
 import { useParams } from "react-router-dom";
 import CheckoutForm from "../components/CheckoutForm";
 import { useLocation } from "react-router-dom";
+import config from '../config';
 
 
 // Make sure to call loadStripe outside of a component’s render to avoid
@@ -20,15 +21,15 @@ export default function Paiement() {
 
     useEffect(() => {
         // Effectuer la requête à l'API en utilisant l'ID du produit
-        fetch(`http://localhost:3000/produits/${id}`)
+        fetch(`${config.baseUrl}/produits/${id}`)
             .then((response) => response.json())
             .then((data) => setPrix(data.prix));
 
-    }, [id]);
+    }, [id,config.baseUrl]);
     useEffect(() => {
         console.log(prix);
         // Create PaymentIntent as soon as the page loads
-        fetch("http://localhost:3000/paiement", {
+        fetch(`${config.baseUrl}/paiement`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ montant: prix }),

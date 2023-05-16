@@ -4,19 +4,20 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
-
+import config from '../config';
 import { Link } from "react-router-dom";
 
 const Produit = () => {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
 
+
   useEffect(() => {
     // Effectuer la requête à l'API en utilisant l'ID du produit
-    fetch(`http://localhost:3000/produits/${id}`)
+    fetch(`${config.baseUrl}/produits/${id}`)
       .then((response) => response.json())
       .then((data) => setProduct(data));
-  }, [id]);
+  }, [id, config.baseUrl]);
 
   // Afficher les détails du produit
   if (!product) {

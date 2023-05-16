@@ -4,18 +4,20 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import Card from './Card';
 import { Link } from 'react-router-dom';
+import config from '../config';
 
 const CarouselCard = () => {
     let [tends, setTends] = useState([]);
     const fetchTends = () => {
-        axios.get('http://localhost:3000/produits').then((reponse) => {
+        console.log(config.baseUrl);
+        axios.get(`${config.baseUrl}/produits`).then((reponse) => {
             setTends(reponse.data);
             console.log(reponse.data);
         }
         );
 
     }
-    useEffect(fetchTends, []);
+    useEffect(fetchTends, [config.baseUrl]);
 
 
     return (
