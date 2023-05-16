@@ -5,7 +5,7 @@ const userRoutes = require('./routes/users');
 const produitRoutes = require('./routes/produits');
 
 const db = require('./models');
-const stripe = require('stripe')('sk_test_51N7udGD8fIYjfM4wWy0pXFQ1zQYLRJlNa1a1w1fAiTxmWkIUVrdzdyN9vKdEagyjhZafnoP50nmGTccDJvRJYEip00BZQltPq3');
+const stripe = require('stripe')('');
 
 app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
